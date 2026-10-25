@@ -1,26 +1,17 @@
 let userName = prompt("Welcome to Bear Hunter Ninja! Please enter your name to get started:");
 alert(`Hi ${userName}! Lets Play!!`);
 let userResponse = prompt("Who are you: Bear, Ninja, or Hunter?");
-let computerResponse = generateResponse();
+let arr = ["Bear", "Ninja", "Hunter"]
+ let num = Math.floor(Math.random() * 3);
+let computerResponse = arr[num]
+
+//Get computer response
+
 
 document.getElementById("userResult").innerHTML = `${userName} you chose ${userResponse}`
 document.getElementById("computerResult").innerHTML = `The computer chose ${computerResponse}`
 
-//Get computer response
-function generateResponse(){
-    let num = Math.floor(Math.random() * 4);
-    if(num === 1){
-        return "Bear"
-    }
-    else if(num === 2){
-        return "Ninja";
-    }
-    else{
-        return "Hunter";
-    }
-}
 
-function evaluateGamePlay(){
     if(userResponse.toLowerCase() === computerResponse.toLowerCase()){
         document.getElementById("winner").innerHTML = "Tie";
     }
@@ -31,5 +22,3 @@ function evaluateGamePlay(){
         document.getElementById("winner").innerHTML = "Computer Wins!!"
     }
 
-}
-evaluateGamePlay();
