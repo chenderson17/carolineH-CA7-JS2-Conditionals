@@ -5,8 +5,6 @@ let arr = ["Bear", "Ninja", "Hunter"]
  let num = Math.floor(Math.random() * 3);
 let computerResponse = arr[num]
 
-//Get computer response
-
 
 document.getElementById("userResult").innerHTML = `${userName} you chose ${userResponse}`
 document.getElementById("computerResult").innerHTML = `The computer chose ${computerResponse}`
